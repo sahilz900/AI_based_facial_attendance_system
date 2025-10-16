@@ -1,0 +1,304 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 30px;
+}
+
+.card {
+  background: #1f2235;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  width: 100%;
+  gap: 50px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section Headings */
+.left-column h2,
+.right-column h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffb347;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* --- LEFT COLUMN LAYOUT FIX --- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.camera-preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Button row for Open Camera & Capture Faces */
+/* Button row for Open Camera & Capture Faces */
+.button-row {
+  display: flex;
+  justify-content: center; /* center buttons horizontally */
+  gap: 20px;               /* space between buttons */
+  margin: 0 auto;          /* center row */
+  flex-wrap: wrap;          /* optional, in case screen is too small */
+}
+
+.button-row button {
+  width: 150px;            /* same width for both buttons */
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;           /* remove extra margin */
+}
+
+/* Remove the extra width from .capture-btn */
+.capture-btn {
+  width: 150px;  /* same as other button */
+}
+
+
+
+.camera-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* space between webcam & buttons */
+  margin-bottom: 25px; /* space below camera group */
+}
+
+.capture-btn {
+  align-self: center;
+  width: 220px;
+  margin-top: 10px;
+}
+
+/* Inputs */
+.left-column input {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: #2b2f4a;
+  color: #fff;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.left-column input:focus {
+  border-color: #ffb347;
+  outline: none;
+  background: #323759;
+}
+
+/* Buttons */
+button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #ffb347;
+  color: #1f2235;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background: transparent;
+  color: #ffb347;
+  border-color: #ffb347;
+  transform: translateY(-3px);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: rgba(255, 179, 71, 0.2);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+button:hover::after {
+  height: 100%;
+}
+
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Right column buttons aligned center */
+.right-column button {
+  width: 200px;
+  align-self: center;
+}
+
+/* Webcam */
+.webcam {
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 3px solid #ffb347;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress */
+.progress-container {
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 20px;
+  border-radius: 10px;
+  background: #ffb347;
+  transition: width 0.3s ease;
+}
+
+/* Message area */
+.message {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  min-height: 24px;
+  background: rgba(255, 179, 71, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 179, 71, 0.4);
+}
+
+.captured-image {
+  margin-top: 15px;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  border: 3px solid #ffb347;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Bring message in front and fixed at top */
+.top-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; /* higher than card */
+  background: rgba(255, 179, 71, 0.9);
+  color: #1f2235;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Progress text below buttons in Actions */
+
+/* Progress */
+.progress-container {
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 20px;
+  overflow: hidden;   /* ensure the animated fill stays inside */
+  position: relative;
+}
+
+/* Determinate progress bar (fills width according to inline style) */
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  background: #ffb347;   /* keep your original color */
+  transition: width 0.25s ease;
+}
+
+/* Indeterminate (animated stripes, stays inside container) */
+.progress-bar.indeterminate {
+  width: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffb347,
+    #ffb347 15px,
+    #e6992c 15px,
+    #e6992c 30px
+  );
+  background-size: 40px 40px;
+  animation: moveStripes 1s linear infinite;
+}
+
+
+.progress-text {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  color: #ffb347;
+}
+
+.welcome-image {
+  width: 250px;
+  border-radius: 12px;
+  border: 3px solid #ffb347;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.disclaimer {
+  font-size: 14px;
+  text-align: center;
+  color: #ffcc70;
+  max-width: 400px;
+  line-height: 1.4;
+}
+/* Animate stripes instead of moving bar out */
+@keyframes moveStripes {
+  from { background-position: 0 0; }
+  to { background-position: 40px 0; }
+}
+
+.att-image {
+  width: 250px;
+  border-radius: 12px;
+  margin-top: 15px;
+  border: 3px solid #ffb347;
+}
+
+.disclaimer {
+  font-size: 14px;
+  color: #ffd580;
+  text-align: center;
+}
+

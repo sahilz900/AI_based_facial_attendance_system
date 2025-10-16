@@ -1,0 +1,73 @@
+# =============================
+# Python
+# =============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyo
+*.egg-info/
+*.log
+
+# Virtual Environments
+venv/
+.venv/
+Backend/venv/
+Backend/.venv/
+
+# =============================
+# Environment / Secrets
+# =============================
+.env
+.env.*
+!env.example      # if you want to keep a sample env
+
+# =============================
+# Node (Frontend)
+# =============================
+Frontend/node_modules/
+Frontend/.next/
+Frontend/dist/
+Frontend/build/
+
+# =============================
+# System / IDE Files
+# =============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =============================
+# Build / Distribution
+# =============================
+dist/
+build/
+*.spec
+
+# =============================
+# Data / Models (ML related)
+# =============================
+data/
+datasets/
+models/
+checkpoints/
+*.h5
+*.pt
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# =============================
+# Cache / Logs
+# =============================
+*.log
+*.cache/
+__pycache__/
+
+# =============================
+# Miscellaneous
+# =============================
+*.sqlite3
+*.db

@@ -1,0 +1,153 @@
+.teacher-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 30px;
+}
+
+.teacher-card {
+  background: #1f2235;
+  padding: 50px 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.teacher-card h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ffb347;
+  padding-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.input-group input {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: #2b2f4a;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #ffb347;
+  outline: none;
+  background: #323759;
+}
+
+.teacher-card button {
+  padding: 14px 0;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #ffb347;
+  color: #1f2235;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.teacher-card button:hover {
+  background: transparent;
+  color: #ffb347;
+  border-color: #ffb347;
+  transform: translateY(-3px);
+}
+
+.teacher-card button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: rgba(255, 179, 71, 0.2);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.teacher-card button:hover::after {
+  height: 100%;
+}
+
+
+.teacher-card button:active {
+  transform: scale(0.97);
+}
+
+/* Back button */
+.back-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* Top message */
+.top-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: rgba(255, 179, 71, 0.9); /* match app.css */
+  color: #1f2235;                         /* match app.css */
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Excel preview */
+.excel-preview {
+  width: 100%;
+  margin-top: 20px;
+  background: #2b2f4a;  /* match app.css */
+  padding: 15px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.excel-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.excel-preview th, .excel-preview td {
+  border: 1px solid #555; /* match app.css */
+  padding: 8px;
+  text-align: center;
+}
+
+.excel-preview th {
+  background: #444b6e;    /* match app.css */
+  font-weight: bold;
+}
